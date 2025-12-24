@@ -7,7 +7,7 @@ type ProjectCardProps = {
   tech: string[];
   github: string;
   live?: string;
-  image: string; // new prop for project image
+  image: string;
 };
 
 export default function ProjectCard({
@@ -19,39 +19,75 @@ export default function ProjectCard({
   image,
 }: ProjectCardProps) {
   return (
-    <div className="border rounded-xl overflow-hidden hover:shadow-lg transition bg-white dark:bg-gray-800">
-      {/* Project Image */}
-      <div className="relative w-full h-48">
+    <div
+      className="
+        group relative rounded-2xl overflow-hidden
+        bg-white dark:bg-gray-900
+        border border-gray-200 dark:border-gray-700
+        shadow-sm hover:shadow-xl
+        transition-all duration-300
+      "
+    >
+      {/* Image */}
+      <div className="relative h-52 overflow-hidden">
         <Image
           src={image}
           alt={title}
           fill
-          className="object-cover"
+          className="
+            object-cover
+            transition-transform duration-500
+            group-hover:scale-110
+          "
+        />
+
+        {/* Image overlay */}
+        <div
+          className="
+            absolute inset-0
+            bg-gradient-to-t from-black/70 via-black/20 to-transparent
+            opacity-0 group-hover:opacity-100
+            transition-opacity duration-300
+          "
         />
       </div>
 
       {/* Content */}
-      <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{title}</h3>
+      <div className="p-6 text-left">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+          {title}
+        </h3>
 
-        <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">{description}</p>
+        <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+          {description}
+        </p>
 
-        <div className="flex flex-wrap gap-2 mb-4">
+        {/* Tech stack */}
+        <div className="flex flex-wrap gap-2 mb-5">
           {tech.map((item) => (
             <span
               key={item}
-              className="text-xs px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300"
+              className="
+                text-xs font-medium
+                px-3 py-1 rounded-full
+                bg-blue-50 text-blue-700
+                dark:bg-blue-900/30 dark:text-blue-300
+              "
             >
               {item}
             </span>
           ))}
         </div>
 
-        <div className="flex gap-4 text-sm font-medium">
+        {/* Links */}
+        <div className="flex items-center gap-4 text-sm font-medium">
           <Link
             href={github}
             target="_blank"
-            className="text-blue-600 hover:underline"
+            className="
+              text-blue-600 dark:text-blue-400
+              hover:underline underline-offset-4
+            "
           >
             GitHub →
           </Link>
@@ -60,7 +96,11 @@ export default function ProjectCard({
             <Link
               href={live}
               target="_blank"
-              className="text-gray-700 dark:text-gray-300 hover:underline"
+              className="
+                text-gray-700 dark:text-gray-300
+                hover:text-blue-600 dark:hover:text-blue-400
+                transition
+              "
             >
               Live Demo →
             </Link>

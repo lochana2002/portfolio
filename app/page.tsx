@@ -3,125 +3,321 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import ProjectCard from "@/components/ProjectCard";
-import { SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiHtml5, SiCss3, SiGithub, SiFigma } from "react-icons/si";
+import { SiJavascript, SiTypescript, SiReact, SiNextdotjs,SiNodedotjs,SiPostman,SiCss3,SiGithub,SiTailwindcss,SiHtml5, SiMongodb,SiFigma,} from "react-icons/si";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Home() {
   return (
     <>
-      {/* ================= HOME / HERO ================= */}
-      <section
-        id="home"
-        className="min-h-screen flex items-center bg-white dark:bg-gray-900"
+     {/* ================= HOME / HERO ================= */}
+<section
+  id="home"
+  className="min-h-screen flex items-center bg-white dark:bg-gray-900"
+>
+  <div className="max-w-7xl mx-auto px-6 flex flex-col-reverse md:flex-row items-center gap-16">
+
+    {/* ================= LEFT : TEXT ================= */}
+    <div className="md:w-2/3 text-center md:text-left">
+      <p className="text-sm uppercase tracking-widest text-blue-600 mb-4">
+        Hello, It's me
+      </p>
+
+      <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
+        Lochana <span className="text-blue-600">Ehelapitiya</span>
+      </h1>
+
+      <p className="text-sm uppercase tracking-widest text-blue-600 mb-4">
+        Undergraduate Software Engineer
+      </p>
+
+      <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mb-10">
+        I build modern, responsive, and user-focused web experiences using
+        Next.js, React, and Tailwind CSS.
+      </p>
+
+      {/* ================= RESUME BUTTON ================= */}
+<a
+  href="/Lochana_Ehelapitiya_Resume.pdf"
+  target="_blank"
+  className="
+    inline-flex items-center gap-2
+    mt-6
+    px-6 py-3
+    rounded-lg
+    text-sm font-medium
+    text-white
+    bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600
+    shadow-lg
+    hover:shadow-xl
+    hover:scale-105
+    transition-all duration-300
+  "
+>
+  📄 Download Resume
+</a>
+
+     {/* ================= SOCIAL LINKS ================= */}
+<div className="mt-8 flex justify-center md:justify-start gap-6">
+  {[
+    {
+      href: "https://github.com/lochana2002",
+      icon: <FaGithub size={22} />,
+      label: "GitHub",
+    },
+    {
+      href: "https://linkedin.com/in/YOUR_LINKEDIN",
+      icon: <FaLinkedin size={22} />,
+      label: "LinkedIn",
+    },
+    {
+      href: "mailto:your@email.com",
+      icon: <FaEnvelope size={22} />,
+      label: "Email",
+    },
+  ].map((item) => (
+    <a
+      key={item.label}
+      href={item.href}
+      target="_blank"
+      aria-label={item.label}
+      className="
+        group relative
+        w-11 h-11
+        flex items-center justify-center
+        rounded-full
+        bg-gray-100 dark:bg-gray-800
+        text-gray-600 dark:text-gray-400
+        transition-all duration-300
+        hover:scale-110
+      "
+    >
+      {/* Gradient Glow */}
+      <span
+        className="
+          absolute inset-0
+          rounded-full
+          bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-500
+          opacity-0
+          blur-lg
+          transition-opacity duration-300
+          group-hover:opacity-70
+        "
+      />
+
+      {/* Icon */}
+      <span className="relative z-10 group-hover:text-white">
+        {item.icon}
+      </span>
+    </a>
+  ))}
+</div>
+
+    </div>
+
+    {/* ================= RIGHT : IMAGE ================= */}
+    <div className="md:w-1/3 flex justify-center">
+      <div className="w-64 h-64 md:w-80 md:h-80 rounded-full p-1 bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-500 shadow-xl">
+        <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-gray-800">
+          <img
+            src="/profile.jpg"   // put image inside /public folder
+            alt="Lochana Ehelapitiya"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+{/* ================= ABOUT ================= */}
+<section
+  id="about"
+  className="min-h-screen py-24 bg-gray-50 dark:bg-gray-800"
+>
+  <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
+
+    {/* ================= PROFILE IMAGE (LEFT) ================= */}
+    <div className="flex justify-center md:justify-start">
+      <div
+        className="
+          w-72 h-72 md:w-80 md:h-80
+          rounded-full
+          bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-500
+          p-1
+          shadow-xl
+        "
       >
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
-          {/* Left: Text */}
-          <div className="md:w-2/3">
-            <p className="text-sm uppercase tracking-widest text-blue-600 mb-4">
-              Software Engineering Undergraduate
-            </p>
-
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
-              Lochana <span className="text-blue-600">Ehelapitiya</span>
-            </h1>
-
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mb-8">
-              I build modern, responsive, and user-focused websites using
-              cutting-edge technologies like Next.js, React, and Tailwind CSS.
-            </p>
-
-            <div className="flex gap-4">
-              <button
-                onClick={() =>
-                  document
-                    .getElementById("projects")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-                className="px-6 py-3 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition"
-              >
-                View Projects
-              </button>
-
-              <button
-                onClick={() =>
-                  document
-                    .getElementById("contact")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
-                className="px-6 py-3 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition"
-              >
-                Contact Me
-              </button>
-            </div>
-          </div>
-
-          {/* Right: Profile Image */}
-          <div className="md:w-1/3 flex justify-center md:justify-end">
-            <div className="w-48 h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-blue-600">
-              <Image
-                src="/profile.jpg"
-                alt="Lochana Ehelapitiya"
-                width={240}
-                height={240}
-                className="object-cover w-full h-full"
-              />
-            </div>
-          </div>
+        <div
+          className="
+            w-full h-full
+            rounded-full
+            overflow-hidden
+            bg-white dark:bg-gray-800
+          "
+        >
+          <img
+            src="/profile.jpg"
+            alt="Profile photo"
+            className="w-full h-full object-cover"
+          />
         </div>
-      </section>
+      </div>
+    </div>
 
-      {/* ================= ABOUT ================= */}
-      <section id="about" className=" min-h-screen py-24 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-14">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
-              About Me
-            </h2>
+    {/* ================= TEXT CONTENT (RIGHT) ================= */}
+    <div className="text-justify">
+      <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white text-left">
+        About Me
+      </h2>
 
-            <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-              I’m a Software Engineering undergraduate in NSBM Green University with a strong passion for frontend
-              development and UI/UX design. I enjoy creating clean, intuitive, and
-              performant web experiences that solve real-world problems.
-            </p>
+      <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+        I’m a Software Engineering undergraduate at NSBM Green University with a
+        strong passion for frontend development and UI/UX design. I enjoy creating
+        clean, intuitive, and performant web experiences that solve real-world
+        problems.
+      </p>
 
-            <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-              My primary focus is modern JavaScript frameworks such as React and
-              Next.js. I continuously improve my skills by building projects,
-              exploring best practices, and learning new tools in the web ecosystem.
-            </p>
+      <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+        My primary focus is modern JavaScript frameworks such as React and Next.js.
+        I continuously improve my skills by building projects, exploring best
+        practices, and learning new tools in the web ecosystem.
+      </p>
 
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-              I am currently seeking opportunities to grow through internships,
-              collaborative projects, and hands-on development work.
-            </p>
-          </div>
-        </div>
-      </section>
+      <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+        I am currently seeking opportunities to grow through internships,
+        collaborative projects, and hands-on development work.
+      </p>
+    </div>
+
+  </div>
+</section>
 
 {/* ================= SKILLS ================= */}
-   <section id="skills" className="min-h-screen py-24 bg-white dark:bg-gray-900">
-  <div className="max-w-7xl mx-auto px-6 text-center">
-    <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900 dark:text-white">
+  <section id="skills" className="min-h-screen py-24 bg-white dark:bg-gray-900">
+  <div className="max-w-7xl mx-auto px-6">
+    <h2 className="text-3xl md:text-4xl font-bold mb-14 text-center text-gray-900 dark:text-white">
       Skills & Technologies
     </h2>
 
-    <div className="flex flex-wrap justify-center gap-4">
-      {[
-        { name: "JavaScript", icon: <SiJavascript size={20} /> },
-        { name: "TypeScript", icon: <SiTypescript size={20} /> },
-        { name: "React", icon: <SiReact size={20} /> },
-        { name: "Next.js", icon: <SiNextdotjs size={20} /> },
-        { name: "Tailwind CSS", icon: <SiTailwindcss size={20} /> },
-        { name: "HTML & CSS", icon: <SiHtml5 size={20} /> },
-        { name: "Git & GitHub", icon: <SiGithub size={20} /> },
-        { name: "Figma", icon: <SiFigma size={20} /> },
-      ].map((skill) => (
-        <span
-          key={skill.name}
-          className="flex items-center gap-2 px-4 py-2 text-sm rounded-full bg-white dark:bg-gray-900 border dark:border-gray-700 text-gray-700 dark:text-gray-300"
-        >
-          {skill.icon} {skill.name}
-        </span>
-      ))}
+    <div className="grid md:grid-cols-3 gap-8">
+      {/* ================= FRONTEND ================= */}
+      <div
+        className="
+          group rounded-2xl p-6
+          bg-white dark:bg-gray-900
+          border border-gray-200 dark:border-gray-700
+          shadow-sm hover:shadow-xl
+          transition-all duration-300
+        "
+      >
+        <h3 className="text-xl font-semibold mb-6 text-gray-800 dark:text-gray-200">
+          Frontend
+        </h3>
+
+        <div className="flex flex-wrap gap-3">
+          {[
+            { name: "JavaScript", icon: <SiJavascript size={18} /> },
+            { name: "TypeScript", icon: <SiTypescript size={18} /> },
+            { name: "React", icon: <SiReact size={18} /> },
+            { name: "Next.js", icon: <SiNextdotjs size={18} /> },
+            { name: "Tailwind CSS", icon: <SiTailwindcss size={18} /> },
+            { name: "HTML & CSS", icon: <SiHtml5 size={18} /> },
+          ].map((skill) => (
+            <span
+              key={skill.name}
+              className="
+                flex items-center gap-2
+                px-4 py-2 text-sm font-medium
+                rounded-full
+                bg-blue-50 text-blue-700
+                dark:bg-blue-900/30 dark:text-blue-300
+                transition
+                group-hover:scale-[1.02]
+              "
+            >
+              {skill.icon}
+              {skill.name}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* ================= BACKEND ================= */}
+      <div
+        className="
+          group rounded-2xl p-6
+          bg-white dark:bg-gray-900
+          border border-gray-200 dark:border-gray-700
+          shadow-sm hover:shadow-xl
+          transition-all duration-300
+        "
+      >
+        <h3 className="text-xl font-semibold mb-6 text-gray-800 dark:text-gray-200">
+          Backend
+        </h3>
+
+        <div className="flex flex-wrap gap-3">
+          {[
+            { name: "Node.js", icon: <SiNodedotjs size={18} /> },
+            { name: "REST APIs", icon: <SiPostman size={18} /> },
+            { name: "MongoDB", icon: <SiMongodb size={18} /> },
+          ].map((skill) => (
+            <span
+              key={skill.name}
+              className="
+                flex items-center gap-2
+                px-4 py-2 text-sm font-medium
+                rounded-full
+                bg-blue-50 text-blue-700
+                dark:bg-blue-900/30 dark:text-blue-300
+                transition
+                group-hover:scale-[1.02]
+              "
+            >
+              {skill.icon}
+              {skill.name}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* ================= TOOLS & DESIGN ================= */}
+      <div
+        className="
+          group rounded-2xl p-6
+          bg-white dark:bg-gray-900
+          border border-gray-200 dark:border-gray-700
+          shadow-sm hover:shadow-xl
+          transition-all duration-300
+        "
+      >
+        <h3 className="text-xl font-semibold mb-6 text-gray-800 dark:text-gray-200">
+          Tools & Design
+        </h3>
+
+        <div className="flex flex-wrap gap-3">
+          {[
+            { name: "Git & GitHub", icon: <SiGithub size={18} /> },
+            { name: "Figma", icon: <SiFigma size={18} /> },
+          ].map((skill) => (
+            <span
+              key={skill.name}
+              className="
+                flex items-center gap-2
+                px-4 py-2 text-sm font-medium
+                rounded-full
+                bg-blue-50 text-blue-700
+                dark:bg-blue-900/30 dark:text-blue-300
+                transition
+                group-hover:scale-[1.02]
+              "
+            >
+              {skill.icon}
+              {skill.name}
+            </span>
+          ))}
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -160,17 +356,9 @@ export default function Home() {
         github="https://github.com/YOUR_USERNAME/portfolio"
         image="/images/projects/portfolio.jpg"
       />
-      <ProjectCard
-        title="Another Project"
-        description="Sample project description."
-        tech={["React", "API"]}
-        github="https://github.com/YOUR_USERNAME/another-project"
-        image="/images/projects/another.jpg"
-      />
     </div>
   </div>
 </section>
-
 
       {/* ================= CONTACT ================= */}
       <section id="contact" className="min-h-screen py-24 bg-gray-50 dark:bg-gray-900">
