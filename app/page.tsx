@@ -26,14 +26,17 @@ export default function Home() {
         Lochana <span className="text-blue-600">Ehelapitiya</span>
       </h1>
 
-      <p className="text-sm uppercase tracking-widest text-blue-600 mb-4">
-        Undergraduate Software Engineer
-      </p>
+     <p className="text-sm uppercase tracking-widest text-blue-600 mb-4">
+  Undergraduate Software Engineer
+</p>
 
-      <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mb-10">
-        I build modern, responsive, and user-focused web experiences using
-        Next.js, React, and Tailwind CSS.
-      </p>
+<p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mb-10 leading-relaxed">
+  I design and develop refined, user-focused web interfaces where aesthetics meet
+  functionality. With a strong interest in frontend engineering and UI/UX design,
+  I enjoy transforming ideas into clean, intuitive, and engaging digital
+  experiences using modern technologies.
+</p>
+
 
       {/* ================= RESUME BUTTON ================= */}
 <a
@@ -171,24 +174,25 @@ export default function Home() {
     {/* ================= TEXT CONTENT (RIGHT) ================= */}
     <div className="text-justify">
       
+<p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+  I am a Software Engineering undergraduate at NSBM Green University with a strong
+  interest in frontend development and UI/UX design. I enjoy crafting visually
+  appealing, intuitive, and high-performing web interfaces that deliver meaningful
+  user experiences.
+</p>
 
-      <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-        I’m a Software Engineering undergraduate at NSBM Green University with a
-        strong passion for frontend development and UI/UX design. I enjoy creating
-        clean, intuitive, and performant web experiences that solve real-world
-        problems.
-      </p>
+<p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+  My work primarily focuses on modern JavaScript technologies such as React and
+  Next.js. I continuously refine my skills by building real-world projects,
+  following industry best practices, and exploring emerging tools within the web
+  development ecosystem.
+</p>
 
-      <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-        My primary focus is modern JavaScript frameworks such as React and Next.js.
-        I continuously improve my skills by building projects, exploring best
-        practices, and learning new tools in the web ecosystem.
-      </p>
-
-      <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-        I am currently seeking opportunities to grow through internships,
-        collaborative projects, and hands-on development work.
-      </p>
+<p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+  I am currently seeking internship opportunities and collaborative projects where
+  I can contribute, learn, and grow as a frontend-focused software engineer while
+  delivering impactful digital solutions.
+</p>
     </div>
 
   </div>
@@ -443,76 +447,155 @@ export default function Home() {
   </div>
 </section>
 
-      {/* ================= CONTACT ================= */}
-      <section id="contact" className="min-h-screen py-24 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-            Get In Touch
-          </h2>
+    {/* ================= CONTACT ================= */}
+<section
+  id="contact"
+  className="min-h-screen py-24 bg-gray-50 dark:bg-gray-800"
+>
+  <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
 
-          <p className="text-gray-600 dark:text-gray-400 mb-10">
-            I’m always open to discussing new projects, internship opportunities,
-            or collaborations. Feel free to reach out — I’d love to connect.
-          </p>
+    {/* ================= LEFT : TEXT ================= */}
+    <div className="text-left">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+        Get In Touch
+      </h2>
 
-          
-     {/* ================= SOCIAL LINKS ================= */}
-<div className="mt-8 flex justify-center gap-6">
-  {[
-    {
-      href: "https://github.com/lochana2002",
-      icon: <FaGithub size={22} />,
-      label: "GitHub",
-    },
-    {
-      href: "https://linkedin.com/in/https://www.linkedin.com/in/lochana-ehelapitiya-1898a9350",
-      icon: <FaLinkedin size={22} />,
-      label: "LinkedIn",
-    },
-    {
-      href: "mailto:ehltehelapitiya@gmail.com",
-      icon: <FaEnvelope size={22} />,
-      label: "Email",
-    },
-  ].map((item) => (
-    <a
-      key={item.label}
-      href={item.href}
-      target="_blank"
-      aria-label={item.label}
-      className="
-        group relative
-        w-11 h-11
-        flex items-center justify-center
-        rounded-full
-        bg-gray-100 dark:bg-gray-800
-        text-gray-600 dark:text-gray-400
-        transition-all duration-300
-        hover:scale-110
-      "
-    >
-      {/* Gradient Glow */}
-      <span
-        className="
-          absolute inset-0
-          rounded-full
-          bg-gradient-to-tr from-blue-500 via-blue-600 to-blue-700
-          opacity-0
-          blur-lg
-          transition-opacity duration-300
-          group-hover:opacity-70
-        "
-      />
+      <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+        I’m open to discussing new projects, internship opportunities, or
+        collaborations. Whether you have a question or just want to connect,
+        feel free to reach out.
+      </p>
 
-      {/* Icon */}
-      <span className="relative z-10 group-hover:text-white">
-        {item.icon}
-      </span>
-    </a>
-  ))}
-</div>
+      {/* ================= SOCIAL LINKS ================= */}
+      <div className="flex gap-5">
+        {[
+          {
+            href: "https://github.com/lochana2002",
+            icon: <FaGithub size={20} />,
+            label: "GitHub",
+          },
+          {
+            href: "https://www.linkedin.com/in/lochana-ehelapitiya-1898a9350",
+            icon: <FaLinkedin size={20} />,
+            label: "LinkedIn",
+          },
+          {
+            href: "mailto:ehltehelapitiya@gmail.com",
+            icon: <FaEnvelope size={20} />,
+            label: "Email",
+          },
+        ].map((item) => (
+          <a
+            key={item.label}
+            href={item.href}
+            target="_blank"
+            aria-label={item.label}
+            className="
+              group relative
+              w-11 h-11
+              flex items-center justify-center
+              rounded-full
+              bg-white dark:bg-gray-900
+              border border-gray-200 dark:border-gray-700
+              text-gray-600 dark:text-gray-400
+              transition-all duration-300
+              hover:scale-110
+            "
+          >
+            {/* Glow */}
+            <span
+              className="
+                absolute inset-0
+                rounded-full
+                bg-blue-600
+                opacity-0 blur-lg
+                transition-opacity duration-300
+                group-hover:opacity-40
+              "
+            />
+            <span className="relative z-10 group-hover:text-blue-600">
+              {item.icon}
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    {/* ================= RIGHT : CONTACT FORM ================= */}
+    <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-8">
+      <form className="space-y-6">
+        {/* Name */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            Your Name
+          </label>
+          <input
+            type="text"
+            placeholder="Your name here..."
+            className="
+              w-full px-4 py-3 rounded-lg
+              bg-gray-50 dark:bg-gray-800
+              border border-gray-200 dark:border-gray-700
+              text-gray-900 dark:text-white
+              focus:outline-none focus:ring-2 focus:ring-blue-600
+            "
+          />
         </div>
-      </section>
+
+        {/* Email */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            Email Address
+          </label>
+          <input
+            type="email"
+            placeholder="john@example.com"
+            className="
+              w-full px-4 py-3 rounded-lg
+              bg-gray-50 dark:bg-gray-800
+              border border-gray-200 dark:border-gray-700
+              text-gray-900 dark:text-white
+              focus:outline-none focus:ring-2 focus:ring-blue-600
+            "
+          />
+        </div>
+
+        {/* Message */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            Message
+          </label>
+          <textarea
+            rows={4}
+            placeholder="Tell me about your project..."
+            className="
+              w-full px-4 py-3 rounded-lg
+              bg-gray-50 dark:bg-gray-800
+              border border-gray-200 dark:border-gray-700
+              text-gray-900 dark:text-white
+              focus:outline-none focus:ring-2 focus:ring-blue-600
+            "
+          />
+        </div>
+
+        {/* Button */}
+        <button
+          type="submit"
+          className="
+            w-full py-3 rounded-lg
+            bg-blue-600 text-white
+            font-medium
+            hover:bg-blue-700
+            transition
+          "
+        >
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
     </>
   );
 }
