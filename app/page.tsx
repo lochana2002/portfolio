@@ -46,7 +46,7 @@ export default function Home() {
     rounded-lg
     text-sm font-medium
     text-white
-    bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600
+    bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700
     shadow-lg
     hover:shadow-xl
     hover:scale-105
@@ -70,7 +70,7 @@ export default function Home() {
       label: "LinkedIn",
     },
     {
-      href: "mailto:your@email.com",
+      href: "mailto:ehltehelapitiya@gmail.com",
       icon: <FaEnvelope size={22} />,
       label: "Email",
     },
@@ -96,7 +96,7 @@ export default function Home() {
         className="
           absolute inset-0
           rounded-full
-          bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-500
+          bg-gradient-to-tr from-blue-500 via-blue-600 to-blue-700
           opacity-0
           blur-lg
           transition-opacity duration-300
@@ -116,7 +116,7 @@ export default function Home() {
 
     {/* ================= RIGHT : IMAGE ================= */}
     <div className="md:w-1/3 flex justify-center">
-      <div className="w-64 h-64 md:w-80 md:h-80 rounded-full p-1 bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-500 shadow-xl">
+      <div className="w-64 h-64 md:w-80 md:h-80 rounded-full p-1 bg-gradient-to-tr from-blue-500 via-blue-600 to-blue-700 shadow-xl">
         <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-gray-800">
           <img
             src="/profile.jpg"   // put image inside /public folder
@@ -129,11 +129,15 @@ export default function Home() {
 
   </div>
 </section>
+
 {/* ================= ABOUT ================= */}
 <section
   id="about"
   className="min-h-screen py-24 bg-gray-50 dark:bg-gray-800"
 >
+  <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white text-center">
+         About Me
+      </h2>
   <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
 
     {/* ================= PROFILE IMAGE (LEFT) ================= */}
@@ -142,7 +146,7 @@ export default function Home() {
         className="
           w-72 h-72 md:w-80 md:h-80
           rounded-full
-          bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-500
+          bg-gradient-to-tr from-blue-500 via-blue-600 to-blue-700
           p-1
           shadow-xl
         "
@@ -166,9 +170,7 @@ export default function Home() {
 
     {/* ================= TEXT CONTENT (RIGHT) ================= */}
     <div className="text-justify">
-      <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white text-left">
-        About Me
-      </h2>
+      
 
       <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
         I’m a Software Engineering undergraduate at NSBM Green University with a
@@ -192,8 +194,89 @@ export default function Home() {
   </div>
 </section>
 
+
+{/* ================= EDUCATION ================= */}
+ <section
+  id="education"
+  className="min-h-screen py-24 bg-gray-900 text-white"
+>
+  <div className="max-w-7xl mx-auto px-6">
+
+    {/* ================= TITLE ================= */}
+    <h2 className="text-4xl font-bold text-center mb-20">
+      My Journey
+    </h2>
+
+    {/* ================= GRID ================= */}
+    <div className="grid md:grid-cols-2 gap-16">
+
+      {/* ================= EDUCATION ================= */}
+      <div>
+        <h3 className="text-2xl font-semibold mb-10 ">
+          Education
+        </h3>
+
+        <div className="relative pl-10 space-y-12">
+          {/* Vertical Line */}
+          <span className="absolute left-4 top-0 h-full w-[2px] bg-blue-600" />
+
+          {/* Item */}
+          <div className="relative">
+            {/* Dot */}
+            <span className="absolute -left-[2px] top-6 w-4 h-4 bg-blue-600 rounded-full" />
+
+            {/* Card */}
+            <div className="border border-blue-600 rounded-xl p-8 hover:shadow-lg transition">
+              <p className="text-sm text-blue-500 mb-2">📅 Since 2023</p>
+              <h4 className="text-xl font-semibold mb-2">
+                Undergraduate – Software Engineering
+              </h4>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Software Engineering undergraduate at NSBM Green University,
+                focusing on frontend development, UI/UX design, and modern web
+                technologies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ================= EXPERIENCE ================= */}
+      <div>
+        <h3 className="text-2xl font-semibold mb-10">
+          Experience
+        </h3>
+
+        <div className="relative pl-10 space-y-12">
+          {/* Vertical Line */}
+          <span className="absolute left-4 top-0 h-full w-[2px] bg-blue-600" />
+
+          {/* Item */}
+          <div className="relative">
+            {/* Dot */}
+            <span className="absolute -left-[2px] top-6 w-4 h-4 bg-blue-600 rounded-full" />
+
+            {/* Card */}
+            <div className="border border-blue-600 rounded-xl p-8 hover:shadow-lg transition">
+              <p className="text-sm text-blue-500 mb-2">📅 2021 – 2022</p>
+              <h4 className="text-xl font-semibold mb-2">
+                Web Designer
+              </h4>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Designed responsive and user-focused websites with emphasis on
+                usability, accessibility, and clean UI principles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 {/* ================= SKILLS ================= */}
-  <section id="skills" className="min-h-screen py-24 bg-white dark:bg-gray-900">
+  <section id="skills" className="min-h-screen py-24 bg-white dark:bg-gray-800">
   <div className="max-w-7xl mx-auto px-6">
     <h2 className="text-3xl md:text-4xl font-bold mb-14 text-center text-gray-900 dark:text-white">
       Skills & Technologies
@@ -323,7 +406,7 @@ export default function Home() {
 </section>
 
       {/* ================= PROJECTS ================= */}
-     <section id="projects" className="min-h-screen py-24 bg-white dark:bg-gray-800">
+     <section id="projects" className="min-h-screen py-24 bg-white dark:bg-gray-900">
   <div className="max-w-7xl mx-auto px-6 text-center">
     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
       Projects
@@ -361,7 +444,7 @@ export default function Home() {
 </section>
 
       {/* ================= CONTACT ================= */}
-      <section id="contact" className="min-h-screen py-24 bg-gray-50 dark:bg-gray-900">
+      <section id="contact" className="min-h-screen py-24 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
             Get In Touch
@@ -372,26 +455,62 @@ export default function Home() {
             or collaborations. Feel free to reach out — I’d love to connect.
           </p>
 
-          <p className="text-blue-600 font-medium mb-4">
-            your.email@example.com
-          </p>
+          
+     {/* ================= SOCIAL LINKS ================= */}
+<div className="mt-8 flex justify-center gap-6">
+  {[
+    {
+      href: "https://github.com/lochana2002",
+      icon: <FaGithub size={22} />,
+      label: "GitHub",
+    },
+    {
+      href: "https://linkedin.com/in/YOUR_LINKEDIN",
+      icon: <FaLinkedin size={22} />,
+      label: "LinkedIn",
+    },
+    {
+      href: "mailto:ehltehelapitiya@gmail.com",
+      icon: <FaEnvelope size={22} />,
+      label: "Email",
+    },
+  ].map((item) => (
+    <a
+      key={item.label}
+      href={item.href}
+      target="_blank"
+      aria-label={item.label}
+      className="
+        group relative
+        w-11 h-11
+        flex items-center justify-center
+        rounded-full
+        bg-gray-100 dark:bg-gray-800
+        text-gray-600 dark:text-gray-400
+        transition-all duration-300
+        hover:scale-110
+      "
+    >
+      {/* Gradient Glow */}
+      <span
+        className="
+          absolute inset-0
+          rounded-full
+          bg-gradient-to-tr from-blue-500 via-blue-600 to-blue-700
+          opacity-0
+          blur-lg
+          transition-opacity duration-300
+          group-hover:opacity-70
+        "
+      />
 
-          <div className="flex justify-center gap-8 text-sm">
-            <a
-              href="https://github.com/YOUR_USERNAME"
-              target="_blank"
-              className="hover:underline"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://linkedin.com/in/YOUR_LINKEDIN"
-              target="_blank"
-              className="hover:underline"
-            >
-              LinkedIn
-            </a>
-          </div>
+      {/* Icon */}
+      <span className="relative z-10 group-hover:text-white">
+        {item.icon}
+      </span>
+    </a>
+  ))}
+</div>
         </div>
       </section>
     </>

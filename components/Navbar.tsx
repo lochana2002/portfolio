@@ -53,6 +53,12 @@ export default function Navbar() {
           >
             About
           </button>
+           <button
+            onClick={() => scrollToSection("education")}
+            className="hover:text-blue-600 dark:hover:text-blue-400"
+          >
+            Education
+          </button>
           <button
             onClick={() => scrollToSection("skills")}
             className="hover:text-blue-600 dark:hover:text-blue-400"
