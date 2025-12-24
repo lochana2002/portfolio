@@ -22,13 +22,13 @@ export default function ProjectCard({
     <div
       className="
         group relative rounded-2xl overflow-hidden
-        bg-white dark:bg-gray-900
+        bg-white dark:bg-gray-800
         border border-gray-200 dark:border-gray-700
         shadow-sm hover:shadow-xl
         transition-all duration-300
       "
     >
-      {/* Image */}
+      {/* ================= IMAGE ================= */}
       <div className="relative h-52 overflow-hidden">
         <Image
           src={image}
@@ -41,19 +41,19 @@ export default function ProjectCard({
           "
         />
 
-        {/* Image overlay */}
+        {/* Hover overlay */}
         <div
           className="
             absolute inset-0
-            bg-gradient-to-t from-black/70 via-black/20 to-transparent
+            bg-gradient-to-t from-black/70 via-black/30 to-transparent
             opacity-0 group-hover:opacity-100
             transition-opacity duration-300
           "
         />
       </div>
 
-      {/* Content */}
-      <div className="p-6 text-left">
+      {/* ================= CONTENT ================= */}
+      <div className="p-6">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
           {title}
         </h3>

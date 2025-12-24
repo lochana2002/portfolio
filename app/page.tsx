@@ -230,7 +230,18 @@ export default function Home() {
             <span className="absolute -left-[2px] top-6 w-4 h-4 bg-blue-600 rounded-full" />
 
             {/* Card */}
-            <div className="border border-blue-600 rounded-xl p-8 hover:shadow-lg transition">
+                      {/* Card */}
+          <div
+            className="
+              rounded-2xl p-8
+              bg-white dark:bg-gray-800
+              border border-gray-200 dark:border-gray-700
+              shadow-sm
+              transition-all duration-300
+              group-hover:-translate-y-1
+              group-hover:shadow-xl
+            "
+          >
               <p className="text-sm text-blue-500 mb-2">📅 Since 2023</p>
               <h4 className="text-xl font-semibold mb-2">
                 Undergraduate – Software Engineering
@@ -242,7 +253,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </div>
+      </div>
       </div>
 
       {/* ================= EXPERIENCE ================= */}
@@ -261,7 +272,18 @@ export default function Home() {
             <span className="absolute -left-[2px] top-6 w-4 h-4 bg-blue-600 rounded-full" />
 
             {/* Card */}
-            <div className="border border-blue-600 rounded-xl p-8 hover:shadow-lg transition">
+                      {/* Card */}
+          <div
+            className="
+              rounded-2xl p-8
+              bg-white dark:bg-gray-800
+              border border-gray-200 dark:border-gray-700
+              shadow-sm
+              transition-all duration-300
+              group-hover:-translate-y-1
+              group-hover:shadow-xl
+            "
+          >
               <p className="text-sm text-blue-500 mb-2">📅 2021 – 2022</p>
               <h4 className="text-xl font-semibold mb-2">
                 Web Designer
@@ -274,9 +296,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-
+      </div>
     </div>
-  </div>
 </section>
 
 {/* ================= SKILLS ================= */}
@@ -452,14 +473,16 @@ export default function Home() {
   id="contact"
   className="min-h-screen py-24 bg-gray-50 dark:bg-gray-800"
 >
+ <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white text-center">
+  Get In Touch
+</h2>
+
+
   <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
 
     {/* ================= LEFT : TEXT ================= */}
     <div className="text-left">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-        Get In Touch
-      </h2>
-
+     
       <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
         I’m open to discussing new projects, internship opportunities, or
         collaborations. Whether you have a question or just want to connect,
