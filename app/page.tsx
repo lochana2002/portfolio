@@ -65,7 +65,7 @@ export default function Home() {
       label: "GitHub",
     },
     {
-      href: "https://linkedin.com/in/YOUR_LINKEDIN",
+      href: "https://linkedin.com/in/https://www.linkedin.com/in/lochana-ehelapitiya-1898a9350",
       icon: <FaLinkedin size={22} />,
       label: "LinkedIn",
     },
@@ -465,7 +465,7 @@ export default function Home() {
       label: "GitHub",
     },
     {
-      href: "https://linkedin.com/in/YOUR_LINKEDIN",
+      href: "https://linkedin.com/in/https://www.linkedin.com/in/lochana-ehelapitiya-1898a9350",
       icon: <FaLinkedin size={22} />,
       label: "LinkedIn",
     },
