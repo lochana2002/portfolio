@@ -63,17 +63,17 @@ export default function Home() {
 <div className="mt-8 flex justify-center md:justify-start gap-6">
   {[
     {
-      href: "https://github.com/lochana2002",
+      href: "https://github.com/",
       icon: <FaGithub size={22} />,
       label: "GitHub",
     },
     {
-      href: "https://linkedin.com/in/https://www.linkedin.com/in/lochana-ehelapitiya-1898a9350",
+      href: "https://linkedin.com/in/https://www.linkedin.com/in/",
       icon: <FaLinkedin size={22} />,
       label: "LinkedIn",
     },
     {
-      href: "mailto:ehltehelapitiya@gmail.com",
+      href: "mailto:@gmail.com",
       icon: <FaEnvelope size={22} />,
       label: "Email",
     },
@@ -119,7 +119,7 @@ export default function Home() {
 
     {/* ================= RIGHT : IMAGE ================= */}
     <div className="md:w-1/3 flex justify-center">
-      <div className="w-64 h-64 md:w-80 md:h-80 rounded-full p-1 bg-gradient-to-tr from-blue-500 via-blue-600 to-blue-700 shadow-xl">
+      <div className="w-64 h-64 md:w-80 md:h-80 rounded-full p-1 shadow-xl">
         <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-gray-800">
           <img
             src="/profile.jpg"   // put image inside /public folder
@@ -149,7 +149,6 @@ export default function Home() {
         className="
           w-72 h-72 md:w-80 md:h-80
           rounded-full
-          bg-gradient-to-tr from-blue-500 via-blue-600 to-blue-700
           p-1
           shadow-xl
         "
@@ -170,12 +169,13 @@ export default function Home() {
         </div>
       </div>
     </div>
+    
 
     {/* ================= TEXT CONTENT (RIGHT) ================= */}
     <div className="text-justify">
       
 <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-  I am a Software Engineering undergraduate at NSBM Green University with a strong
+  I am Lochana Thathsarani Ehelapitiya, Software Engineering undergraduate at NSBM Green University with a strong
   interest in frontend development and UI/UX design. I enjoy crafting visually
   appealing, intuitive, and high-performing web interfaces that deliver meaningful
   user experiences.
@@ -198,12 +198,12 @@ export default function Home() {
   </div>
 </section>
 
-
 {/* ================= EDUCATION ================= */}
- <section
+<section
   id="education"
-  className="min-h-screen py-24 bg-gray-900 text-white"
+  className="min-h-screen py-24 bg-white text-gray-900 dark:bg-gray-900 dark:text-white"
 >
+
   <div className="max-w-7xl mx-auto px-6">
 
     {/* ================= TITLE ================= */}
@@ -216,44 +216,38 @@ export default function Home() {
 
       {/* ================= EDUCATION ================= */}
       <div>
-        <h3 className="text-2xl font-semibold mb-10 ">
+        <h3 className="text-2xl font-semibold mb-10">
           Education
         </h3>
 
         <div className="relative pl-10 space-y-12">
-          {/* Vertical Line */}
           <span className="absolute left-4 top-0 h-full w-[2px] bg-blue-600" />
 
-          {/* Item */}
           <div className="relative">
-            {/* Dot */}
             <span className="absolute -left-[2px] top-6 w-4 h-4 bg-blue-600 rounded-full" />
 
-            {/* Card */}
-                      {/* Card */}
-          <div
-            className="
-              rounded-2xl p-8
-              bg-white dark:bg-gray-800
-              border border-gray-200 dark:border-gray-700
-              shadow-sm
-              transition-all duration-300
-              group-hover:-translate-y-1
-              group-hover:shadow-xl
-            "
-          >
+            <div
+              className="
+                rounded-2xl p-8
+                bg-white dark:bg-gray-800
+                border border-gray-200 dark:border-gray-700
+                shadow-sm hover:shadow-xl
+                transition-all duration-300
+              "
+            >
               <p className="text-sm text-blue-500 mb-2">📅 Since 2023</p>
               <h4 className="text-xl font-semibold mb-2">
                 Undergraduate – Software Engineering
               </h4>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+
                 Software Engineering undergraduate at NSBM Green University,
                 focusing on frontend development, UI/UX design, and modern web
                 technologies.
               </p>
             </div>
           </div>
-      </div>
+        </div>
       </div>
 
       {/* ================= EXPERIENCE ================= */}
@@ -263,32 +257,25 @@ export default function Home() {
         </h3>
 
         <div className="relative pl-10 space-y-12">
-          {/* Vertical Line */}
           <span className="absolute left-4 top-0 h-full w-[2px] bg-blue-600" />
 
-          {/* Item */}
           <div className="relative">
-            {/* Dot */}
             <span className="absolute -left-[2px] top-6 w-4 h-4 bg-blue-600 rounded-full" />
 
-            {/* Card */}
-                      {/* Card */}
-          <div
-            className="
-              rounded-2xl p-8
-              bg-white dark:bg-gray-800
-              border border-gray-200 dark:border-gray-700
-              shadow-sm
-              transition-all duration-300
-              group-hover:-translate-y-1
-              group-hover:shadow-xl
-            "
-          >
+            <div
+              className="
+                rounded-2xl p-8
+                bg-white dark:bg-gray-800
+                border border-gray-200 dark:border-gray-700
+                shadow-sm hover:shadow-xl
+                transition-all duration-300
+              "
+            >
               <p className="text-sm text-blue-500 mb-2">📅 2021 – 2022</p>
               <h4 className="text-xl font-semibold mb-2">
                 Web Designer
               </h4>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                 Designed responsive and user-focused websites with emphasis on
                 usability, accessibility, and clean UI principles.
               </p>
@@ -296,8 +283,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      </div>
+
     </div>
+  </div>
 </section>
 
 {/* ================= SKILLS ================= */}
@@ -447,7 +435,7 @@ export default function Home() {
         title="Safari Booking System"
         description="Modern booking system with responsive UI."
         tech={["Next.js", "Tailwind"]}
-        github="https://github.com/lochana2002/safari-booking"
+        github="https://github.com/"
         image="/safari.png"
       />
       <ProjectCard
@@ -493,17 +481,17 @@ export default function Home() {
       <div className="flex gap-5">
         {[
           {
-            href: "https://github.com/lochana2002",
+            href: "https://github.com/",
             icon: <FaGithub size={20} />,
             label: "GitHub",
           },
           {
-            href: "https://www.linkedin.com/in/lochana-ehelapitiya-1898a9350",
+            href: "https://www.linkedin.com/in/",
             icon: <FaLinkedin size={20} />,
             label: "LinkedIn",
           },
           {
-            href: "mailto:ehltehelapitiya@gmail.com",
+            href: "mailto:@gmail.com",
             icon: <FaEnvelope size={20} />,
             label: "Email",
           },
@@ -606,7 +594,7 @@ export default function Home() {
           type="submit"
           className="
             w-full py-3 rounded-lg
-            bg-blue-600 text-white
+            bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white
             font-medium
             hover:bg-blue-700
             transition
