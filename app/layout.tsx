@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { ThemeProvider } from "next-themes";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Lochana Ehelapitiya | Portfolio",
@@ -17,17 +17,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="transition-colors duration-300">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem={false}
-        >
+       
+        <Providers>
           <Navbar />
+
           <main className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
             {children}
           </main>
+
           <Footer />
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );

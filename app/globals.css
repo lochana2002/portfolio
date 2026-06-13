@@ -33,3 +33,66 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 6s linear infinite;
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse 10s linear infinite;
+}
+/* ===== LIGHT SCROLLBAR ===== */
+:root {
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: #c7c7c7;
+  --scrollbar-thumb-hover: #a8a8a8;
+}
+
+/* ===== DARK SCROLLBAR ===== */
+.dark {
+  --scrollbar-track: #0a0a0f;
+  --scrollbar-thumb: #2a2a2a;
+  --scrollbar-thumb-hover: #3a3a3a;
+}
+
+/* ===== SCROLLBAR BASE ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+@keyframes dotBlink {
+  0%, 100% { opacity: 0;            transform: scale(0.8); }
+  50%       { opacity: var(--peak);  transform: scale(1);   }
+}
+
