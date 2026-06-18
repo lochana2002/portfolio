@@ -3,7 +3,22 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import ProjectCard from "@/components/ProjectCard";
-import { SiJavascript, SiTypescript, SiReact, SiNextdotjs,SiNodedotjs,SiPostman,SiCss3,SiGithub,SiTailwindcss,SiHtml5, SiMongodb,SiFigma,} from "react-icons/si";
+import CertificationCard from "@/components/CertificationCard";
+import {
+  SiJavascript, SiTypescript, SiReact, SiNextdotjs,
+  SiNodedotjs,
+  SiNestjs,
+  SiFirebase,
+  SiPostman,
+  SiGithub,
+  SiTailwindcss,
+  SiHtml5,
+  SiCss3,SiMysql,
+  SiPostgresql,
+  SiMongodb,
+  SiFigma,
+  SiAdobephotoshop,
+} from "react-icons/si";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import ScrollReveal from "@/components/ScrollReveal";
 import { motion } from "framer-motion";
@@ -12,6 +27,38 @@ import DotsBackground from "@/components/DotsBackground";
 
 
 export default function Home() {
+
+  const certifications = [
+  {
+    title: "Web Design for Beginners",
+    issuer: "University of Moratuwa",
+    date: "June 2025",
+    image: "web1.jpg",
+    link: "https://open.uom.lk/lms/mod/customcert/verify_certificate.php",
+  },
+  {
+    title: " Frontend Development",
+    issuer: "University of Moratuwa",
+    date: "Mar 2026",
+    image: "web2.jpg",
+    link: "https://open.uom.lk/lms/mod/customcert/verify_certificate.php",
+  },
+  {
+    title: " Python for Beginners",
+    issuer: "University of Moratuwa",
+    date: "Feb 2026",
+    image: "python.jpg",
+    link: "#",
+  },
+  {
+    title: " Frontend Development with React",
+    issuer: "IBM",
+    date: "Mar 2026",
+    image: "python.jpg",
+    link: "https://open.uom.lk/lms/mod/customcert/verify_certificate.php",
+  },
+];
+
   return (
     <>
      <DotsBackground />
@@ -155,7 +202,7 @@ export default function Home() {
   id="about"
   className="min-h-screen py-24 bg-gray-50 dark:bg-gray-800"
 >
-  <h2 className="text-4xl font-bold text-center mb-20">
+  <h2 className="text-5xl font-bold text-center mb-20">
     About<span className="bg-gradient-to-r from-blue-500 via-blue-600 to-purple-800 bg-clip-text text-transparent"> Me</span>
   </h2>
   <div className="max-w-7xl mx-auto px-6 sm:px-8 grid md:grid-cols-2 gap-10 md:gap-14 items-center">
@@ -225,10 +272,10 @@ export default function Home() {
  <div className="max-w-4xl mx-auto px-6">
 
   {/* TITLE */}
-  <h2 className="text-4xl font-bold text-center mb-20">
+  <h2 className="text-5xl font-bold text-center mb-20">
     My <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Journey</span>
   </h2>
-
+<p className="text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto text-center">A glimpse into my academic background, and growth in software engineering.</p>
   <div className="relative">
 
     {/* Desktop center line */}
@@ -275,7 +322,7 @@ export default function Home() {
 
         {/* Mobile dot */}
         <div className="md:hidden absolute left-1 w-8 h-8 rounded-full bg-purple-600 border-4 border-white dark:border-gray-900 flex items-center justify-center z-10 text-xs shadow-lg">
-          {"💼"}
+          {"📝"}
         </div>
 
         {/* Left spacer */}
@@ -283,19 +330,19 @@ export default function Home() {
 
         {/* Desktop center dot */}
         <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-purple-600 border-4 border-white dark:border-gray-900 items-center justify-center z-10 shadow-lg shadow-purple-500/30">
-          {"💼"}
+          {"📝"}
         </div>
 
         {/* Card — right */}
         <div className="w-full md:w-[45%]">
           <div className="rounded-2xl p-6 bg-white dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
             <span className="inline-block text-xs font-medium px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 mb-3">
-              2021 – 2022
+              2019 – 2022
             </span>
-            <h4 className="text-lg font-semibold mb-1">Web Designer</h4>
-            <p className="text-sm text-purple-400 mb-3 font-medium">Freelance</p>
+            <h4 className="text-lg font-semibold mb-1">Mo/ K.N.S.</h4>
+            <p className="text-sm text-purple-400 mb-3 font-medium">G.C.E.(A/L) Examination</p>
             <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-              Designed responsive and user-focused websites with emphasis on usability, accessibility, and clean UI principles.
+              Physical Science Stream
             </p>
           </div>
         </div>
@@ -311,11 +358,13 @@ export default function Home() {
 <ScrollReveal>
   <section id="skills" className="min-h-screen py-24 bg-white dark:bg-gray-800">
   <div className="max-w-7xl mx-auto px-6">
-  <h2 className="text-4xl font-bold text-center mb-20">
+  <h2 className="text-5xl font-bold text-center mb-20">
     Skills & <span className="bg-gradient-to-r from-blue-500 via-blue-600 to-purple-800 bg-clip-text text-transparent">Technologies</span>
   </h2>
-
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+<p className="text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto text-center">
+    Technologies and tools I use to design, develop, and deploy applications.
+</p>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
       {/* ================= FRONTEND ================= */}
       <div
         className="
@@ -332,13 +381,14 @@ export default function Home() {
 
         <div className="flex flex-wrap gap-3">
           {[
-            { name: "JavaScript", icon: <SiJavascript size={18} /> },
-            { name: "TypeScript", icon: <SiTypescript size={18} /> },
-            { name: "React", icon: <SiReact size={18} /> },
-            { name: "Next.js", icon: <SiNextdotjs size={18} /> },
-            { name: "Tailwind CSS", icon: <SiTailwindcss size={18} /> },
-            { name: "HTML & CSS", icon: <SiHtml5 size={18} /> },
-          ].map((skill) => (
+  { name: "JavaScript", icon: <SiJavascript size={18} /> },
+  { name: "TypeScript", icon: <SiTypescript size={18} /> },
+  { name: "React", icon: <SiReact size={18} /> },
+  { name: "Next.js", icon: <SiNextdotjs size={18} /> },
+  { name: "Tailwind CSS", icon: <SiTailwindcss size={18} /> },
+  { name: "HTML", icon: <SiHtml5 size={18} /> },
+  { name: "CSS", icon: <SiCss3 size={18} /> },
+].map((skill) => (
             <span
               key={skill.name}
               className="
@@ -374,48 +424,10 @@ export default function Home() {
 
         <div className="flex flex-wrap gap-3">
           {[
-            { name: "Node.js", icon: <SiNodedotjs size={18} /> },
-            { name: "REST APIs", icon: <SiPostman size={18} /> },
-            { name: "MongoDB", icon: <SiMongodb size={18} /> },
-          ].map((skill) => (
-            <span
-              key={skill.name}
-              className="
-                flex items-center gap-2
-                px-4 py-2 text-sm font-medium
-                rounded-full
-                bg-blue-50 text-blue-700
-                dark:bg-blue-900/30 dark:text-blue-300
-                transition
-                group-hover:scale-[1.02]
-              "
-            >
-              {skill.icon}
-              {skill.name}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* ================= TOOLS & DESIGN ================= */}
-      <div
-        className="
-          group rounded-2xl p-6
-          bg-white dark:bg-gray-900
-          border border-gray-200 dark:border-gray-700
-          shadow-sm hover:shadow-xl
-          transition-all duration-300
-        "
-      >
-        <h3 className="text-xl font-semibold mb-6 text-gray-800 dark:text-gray-200">
-          Tools & Design
-        </h3>
-
-        <div className="flex flex-wrap gap-3">
-          {[
-            { name: "Git & GitHub", icon: <SiGithub size={18} /> },
-            { name: "Figma", icon: <SiFigma size={18} /> },
-          ].map((skill) => (
+  { name: "Node.js", icon: <SiNodedotjs size={18} /> },
+  { name: "NestJS", icon: <SiNestjs size={18} /> },
+  { name: "Firebase", icon: <SiFirebase size={18} /> },
+].map((skill) => (
             <span
               key={skill.name}
               className="
@@ -451,9 +463,9 @@ export default function Home() {
 
         <div className="flex flex-wrap gap-3">
           {[
-            { name: "Git & GitHub", icon: <SiGithub size={18} /> },
-            { name: "Figma", icon: <SiFigma size={18} /> },
-          ].map((skill) => (
+  { name: "MySQL", icon: <SiMysql size={18} /> },
+  { name: "PostgreSQL", icon: <SiPostgresql size={18} /> }, { name: "MongoDB", icon: <SiMongodb size={18} /> },
+].map((skill) => (
             <span
               key={skill.name}
               className="
@@ -472,8 +484,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-
-      {/* ================= DATABASE ================= */}
+       {/* ================= TOOLS & DESIGN ================= */}
       <div
         className="
           group rounded-2xl p-6
@@ -484,51 +495,15 @@ export default function Home() {
         "
       >
         <h3 className="text-xl font-semibold mb-6 text-gray-800 dark:text-gray-200">
-          Database
+          Tools & Design
         </h3>
 
         <div className="flex flex-wrap gap-3">
           {[
-            { name: "Git & GitHub", icon: <SiGithub size={18} /> },
-            { name: "Figma", icon: <SiFigma size={18} /> },
-          ].map((skill) => (
-            <span
-              key={skill.name}
-              className="
-                flex items-center gap-2
-                px-4 py-2 text-sm font-medium
-                rounded-full
-                bg-blue-50 text-blue-700
-                dark:bg-blue-900/30 dark:text-blue-300
-                transition
-                group-hover:scale-[1.02]
-              "
-            >
-              {skill.icon}
-              {skill.name}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* ================= DATABASE ================= */}
-      <div
-        className="
-          group rounded-2xl p-6
-          bg-white dark:bg-gray-900
-          border border-gray-200 dark:border-gray-700
-          shadow-sm hover:shadow-xl
-          transition-all duration-300
-        "
-      >
-        <h3 className="text-xl font-semibold mb-6 text-gray-800 dark:text-gray-200">
-          Database
-        </h3>
-
-        <div className="flex flex-wrap gap-3">
-          {[
-            { name: "Git & GitHub", icon: <SiGithub size={18} /> },
-            { name: "Figma", icon: <SiFigma size={18} /> },
+              { name: "Git & GitHub", icon: <SiGithub size={18} /> },
+  { name: "Postman", icon: <SiPostman size={18} /> },
+  { name: "Figma", icon: <SiFigma size={18} /> },
+  { name: "Photoshop", icon: <SiAdobephotoshop size={18} /> },
           ].map((skill) => (
             <span
               key={skill.name}
@@ -556,41 +531,40 @@ export default function Home() {
       <ScrollReveal>
      <section id="projects" className="min-h-screen py-24 bg-white dark:bg-gray-900">
   <div className="max-w-7xl mx-auto px-6 text-center">
-    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+    <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
       Projects
     </h2>
-
-    <p className="text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
-      A selection of academic and personal projects that demonstrate my skills
-      in web development, UI design, and problem solving.
-    </p>
+    
+      <p className="text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
+  A collection of individual and team projects showcasing my development skills, UI/UX, collaboration, and problem-solving ability.
+</p>
 
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
       <ProjectCard
         title="Safari Booking System"
         description="Modern booking system with responsive UI."
-        tech={["Next.js", "Tailwind"]}
+        tech={["Next.js", "Tailwind", "TypeScript", "NestJS", "PostgreSQL", "UI/UX"]}
         github="https://github.com/lochana2002/safari-booking"
         image="/safari.png"
       />
       <ProjectCard
-        title="tickets.lk Homepage Redesign"
+        title="ERP System for School"
         description="UI/UX redesign focused on usability and improved user flow."
-        tech={["UI/UX", "Figma"]}
-        github="https://github.com/YOUR_USERNAME/tickets-redesign"
-        image="/images/projects/tickets.jpg"
+        tech={["react", "Node.js", "Expressjs", "PostgreSQL"]}
+        github="https://github.com/lochana2002/school-erp-system"
+        image="/"
       />
       <ProjectCard
         title="'GoviAI' Mobile Application"
         description="My personal developer portfolio built with modern technologies."
-        tech={["Next.js", "TypeScript", "Tailwind CSS"]}
+        tech={["Flutter", "Firebase", "Gemini API"]}
         github="https://github.com/Nisansala23/govi-ai"
         image="/goviai.png"
       />
       <ProjectCard
         title="Auction Site Management System"
         description="UI/UX redesign focused on usability and improved user flow."
-        tech={["UI/UX", "Figma"]}
+        tech={["Next.js", "Tailwind", "TypeScript", "C#", ]}
         github="https://github.com/laspraharshana/test-front"
         image="/auction.png"
       />
@@ -613,160 +587,96 @@ export default function Home() {
 </section>
 </ScrollReveal>
 
-    {/* ================= CONTACT ================= */}
-    <ScrollReveal>
-<section
-  id="contact"
-  className="min-h-screen py-24 bg-gray-50 dark:bg-gray-800"
->
- <h2 className="text-4xl font-bold text-center mb-20">
-    Get In<span className="bg-gradient-to-r from-blue-500 via-blue-600 to-purple-800 bg-clip-text text-transparent"> Touch</span> 
-  </h2>
+{/* ================= CERTIFICATIONS ================= */}
+<ScrollReveal>
+  <section
+    id="certifications"
+    className="min-h-screen py-24 bg-white dark:bg-gray-800"
+  >
+    <div className="max-w-7xl mx-auto px-6">
 
+      <h2 className="text-5xl font-bold text-center mb-20">
+        Certifications
+      </h2>
+      <p className="text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto text-center">
+  Certifications that showcase my technical skills and continuous learning.
+</p>
 
-  <div className="max-w-6xl mx-auto px-6 sm:px-8 grid md:grid-cols-2 gap-10 md:gap-14 items-center">
-
-    {/* ================= LEFT : TEXT ================= */}
-    <div className="text-left">
-     <div className="text-justify">
-      <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-        I’m open to discussing new projects, internship opportunities, or
-        collaborations. Whether you have a question or just want to connect,
-        feel free to reach out.
-      </p></div>
-
-      {/* ================= SOCIAL LINKS ================= */}
-      <div className="flex gap-5">
-        {[
-          {
-            href: "https://githubbfbf.com/",
-            icon: <FaGithub size={20} />,
-            label: "GitHub",
-          },
-          {
-            href: "https://www.linkedinbbtb.com/in/",
-            icon: <FaLinkedin size={20} />,
-            label: "LinkedIn",
-          },
-          {
-            href: "mailto:@gmail.com",
-            icon: <FaEnvelope size={20} />,
-            label: "Email",
-          },
-        ].map((item) => (
-          <a
-            key={item.label}
-            href={item.href}
-            target="_blank"
-            aria-label={item.label}
-            className="
-              group relative
-              w-11 h-11
-              flex items-center justify-center
-              rounded-full
-              bg-white dark:bg-gray-900
-              border border-gray-200 dark:border-gray-700
-              text-gray-600 dark:text-gray-400
-              transition-all duration-300
-              hover:scale-110
-            "
-          >
-            {/* Gradient Glow */}
-      <span
-        className="
-          absolute inset-0
-          rounded-full
-          bg-gradient-to-tr from-blue-500 via-blue-600 to-purple-800
-          opacity-0
-          blur-lg
-          transition-opacity duration-300
-          group-hover:opacity-70
-        "
-      />
-            <span className="relative z-10 group-hover:text-blue-600">
-              {item.icon}
-            </span>
-          </a>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {certifications.map((cert, index) => (
+          <CertificationCard
+            key={index}
+            title={cert.title}
+            issuer={cert.issuer}
+            date={cert.date}
+            image={cert.image}
+            link={cert.link}
+          />
         ))}
       </div>
+
     </div>
-
-    {/* ================= RIGHT : CONTACT FORM ================= */}
-    <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-8">
-      <form className="space-y-6">
-        {/* Name */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            Your Name
-          </label>
-          <input
-            type="text"
-            placeholder="Your name here..."
-            className="
-              w-full px-4 py-3 rounded-lg
-              bg-gray-50 dark:bg-gray-800
-              border border-gray-200 dark:border-gray-700
-              text-gray-900 dark:text-white
-              focus:outline-none focus:ring-2 focus:ring-blue-600
-            "
-          />
-        </div>
-
-        {/* Email */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            Email Address
-          </label>
-          <input
-            type="email"
-            placeholder="john@example.com"
-            className="
-              w-full px-4 py-3 rounded-lg
-              bg-gray-50 dark:bg-gray-800
-              border border-gray-200 dark:border-gray-700
-              text-gray-900 dark:text-white
-              focus:outline-none focus:ring-2 focus:ring-blue-600
-            "
-          />
-        </div>
-
-        {/* Message */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            Message
-          </label>
-          <textarea
-            rows={4}
-            placeholder="Tell me about your project..."
-            className="
-              w-full px-4 py-3 rounded-lg
-              bg-gray-50 dark:bg-gray-800
-              border border-gray-200 dark:border-gray-700
-              text-gray-900 dark:text-white
-              focus:outline-none focus:ring-2 focus:ring-blue-600
-            "
-          />
-        </div>
-
-        {/* Button */}
-        <button
-          type="submit"
-          className="
-            w-full py-3 rounded-lg
-            bg-gradient-to-r from-blue-500 via-blue-600 to-purple-800
-            font-medium
-            transition
-            transition hover:scale-[1.05]
-          "
-        >
-          Send Message
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
+  </section>
 </ScrollReveal>
 
+    {/* ================= CONTACT ================= */}
+<ScrollReveal>
+  <section id="contact" className="min-h-screen py-24 bg-gray-50 dark:bg-gray-900">
+    <h2 className="text-5xl font-bold text-center mb-20">
+      Get In<span className="bg-gradient-to-r from-blue-500 via-blue-600 to-purple-800 bg-clip-text text-transparent"> Touch</span>
+    </h2>
+    <p className="text-gray-500 dark:text-gray-400 text-sm md:text-base leading-relaxed max-w-md mx-auto mb-8 text-center">
+  Open to internships, freelance projects, and collaborations. Feel free to reach out anytime.
+</p>
+{/* Heading */}
+<h3 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white mb-4 text-center">
+  Let’s build something great together
+</h3>
+
+{/* Contact pills */}
+<div className="flex flex-wrap justify-center gap-3">
+  {[
+    {
+      href: "mailto:youremail@gmail.com",
+      icon: <FaEnvelope size={14} />,
+      label: "Email",
+    },
+    {
+      href: "https://linkedin.com/in/you",
+      icon: <FaLinkedin size={14} />,
+      label: "LinkedIn",
+    },
+    {
+      href: "https://github.com/you",
+      icon: <FaGithub size={14} />,
+      label: "GitHub",
+    },
+  ].map((item) => (
+    <a
+      key={item.label}
+      href={item.href}
+      target="_blank"
+      rel="noreferrer"
+      className="
+        inline-flex items-center gap-2
+        px-5 py-2.5
+        rounded-full
+        border border-gray-200 dark:border-gray-700
+        text-sm font-medium
+        text-gray-600 dark:text-gray-300
+        hover:bg-gray-900 hover:text-white
+        dark:hover:bg-white dark:hover:text-gray-900
+        transition-all duration-200
+        hover:scale-[1.03]
+      "
+    >
+      {item.icon}
+      {item.label}
+    </a>
+  ))}
+</div>
+  </section>
+</ScrollReveal>
     </>
   );
 }
