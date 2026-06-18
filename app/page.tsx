@@ -48,15 +48,9 @@ export default function Home() {
     issuer: "University of Moratuwa",
     date: "Feb 2026",
     image: "python.jpg",
-    link: "#",
-  },
-  {
-    title: " Frontend Development with React",
-    issuer: "IBM",
-    date: "Mar 2026",
-    image: "python.jpg",
     link: "https://open.uom.lk/lms/mod/customcert/verify_certificate.php",
   },
+ 
 ];
 
   return (
@@ -116,17 +110,17 @@ export default function Home() {
 <div className="mt-8 flex justify-center md:justify-start gap-6">
   {[
     {
-      href: "https://github111efe.com/",
+      href: "https://github.com/lochana2002",
       icon: <FaGithub size={22} />,
       label: "GitHub",
     },
     {
-      href: "https://linkedinewfe.com/in/https://www.linkedin.com/in/",
+      href: "www.linkedin.com/in/lochana-thathsarani-ehelapitiya-1898a9350",
       icon: <FaLinkedin size={22} />,
       label: "LinkedIn",
     },
     {
-      href: "ehltehelapitiy1fefa@gmail.com",
+      href: "ehltehelapitiya@gmail.com",
       icon: <FaEnvelope size={22} />,
       label: "Email",
     },
@@ -548,13 +542,6 @@ export default function Home() {
         image="/safari.png"
       />
       <ProjectCard
-        title="ERP System for School"
-        description="UI/UX redesign focused on usability and improved user flow."
-        tech={["react", "Node.js", "Expressjs", "PostgreSQL"]}
-        github="https://github.com/lochana2002/school-erp-system"
-        image="/"
-      />
-      <ProjectCard
         title="'GoviAI' Mobile Application"
         description="My personal developer portfolio built with modern technologies."
         tech={["Flutter", "Firebase", "Gemini API"]}
@@ -568,20 +555,7 @@ export default function Home() {
         github="https://github.com/laspraharshana/test-front"
         image="/auction.png"
       />
-      <ProjectCard
-        title="tickets.lk Homepage Redesign"
-        description="UI/UX redesign focused on usability and improved user flow."
-        tech={["UI/UX", "Figma"]}
-        github="https://github.com/YOUR_USERNAME/tickets-redesign"
-        image="/images/projects/tickets.jpg"
-      />
-      <ProjectCard
-        title="tickets.lk Homepage Redesign"
-        description="UI/UX redesign focused on usability and improved user flow."
-        tech={["UI/UX", "Figma"]}
-        github="https://github.com/YOUR_USERNAME/tickets-redesign"
-        image="/images/projects/tickets.jpg"
-      />
+
     </div>
   </div>
 </section>
@@ -637,17 +611,17 @@ export default function Home() {
 <div className="flex flex-wrap justify-center gap-3">
   {[
     {
-      href: "mailto:youremail@gmail.com",
+      href: "ehltehelapitiya@gmail.com",
       icon: <FaEnvelope size={14} />,
       label: "Email",
     },
     {
-      href: "https://linkedin.com/in/you",
+      href: "www.linkedin.com/in/lochana-thathsarani-ehelapitiya-1898a9350",
       icon: <FaLinkedin size={14} />,
       label: "LinkedIn",
     },
     {
-      href: "https://github.com/you",
+      href: "https://github.com/lochana2002",
       icon: <FaGithub size={14} />,
       label: "GitHub",
     },
