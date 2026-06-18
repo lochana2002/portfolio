@@ -80,9 +80,8 @@ export default function Home() {
 <div className="text-justify">
 <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mb-10 leading-relaxed">
   I design and develop refined, user-focused web interfaces where aesthetics meet
-  functionality. With a strong interest in full - stack web development and UI/UX design,
-  I enjoy transforming ideas into clean, intuitive, and engaging digital
-  experiences using modern technologies.
+  functionality with a strong interest in full-stack web development, creating intuitive, scalable, and user-centered web
+applications through modern development practices and effective UI/UX design. 
 </p></div>
 
       {/* ================= RESUME BUTTON ================= */}
@@ -233,9 +232,9 @@ export default function Home() {
     <div className="text-justify">
       
 <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-  I am Lochana Thathsarani Ehelapitiya, Software Engineering undergraduate at NSBM Green University with a strong
-  interest in Full-Stack Web Development and UI/UX design. I enjoy crafting visually
-  appealing, intuitive, and high-performing web interfaces that deliver meaningful
+  I am Lochana Thathsarani Ehelapitiya, Software Engineering undergraduate at NSBM Green University with a strong interest in full-stack web development, creating intuitive, scalable, and user-centered web
+applications through modern development practices and effective UI/UX design.  I enjoy crafting visually
+  appealing, and high-performing web interfaces that deliver meaningful
   user experiences.
 </p>
 
@@ -248,7 +247,7 @@ export default function Home() {
 
 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
   I am currently seeking internship opportunities and collaborative projects where
-  I can contribute, learn, and grow as a frontend-focused software engineer while
+  I can contribute, learn, and grow as a full-stack web development focused software engineer while
   delivering impactful digital solutions.
 </p>
     </div>
