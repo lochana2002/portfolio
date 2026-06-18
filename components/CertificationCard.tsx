@@ -41,9 +41,10 @@ export default function CertificationCard({
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition"
+          className="text-blue-600 dark:text-blue-400
+              hover:underline underline-offset-4"
         >
-          Verify
+          Verify →
         </a>
 
       </div>
