@@ -542,14 +542,15 @@ applications through modern development practices and effective UI/UX design.  I
       />
       <ProjectCard
         title="'GoviAI' Mobile Application"
-        description="My personal developer portfolio built with modern technologies."
+        description="Developed an AI-powered agriculture mobile application for Sri Lankan farmers using Flutter and  Firebase."
         tech={["Flutter", "Firebase", "Gemini API"]}
         github="https://github.com/Nisansala23/govi-ai"
         image="/goviai.png"
       />
       <ProjectCard
         title="Auction Site Management System"
-        description="UI/UX redesign focused on usability and improved user flow."
+        description="Developed the complete Blog module as a full-stack contributor using ASP.NET Core, Entity Framework Core, and
+Next.js."
         tech={["Next.js", "Tailwind", "TypeScript", "C#", ]}
         github="https://github.com/laspraharshana/test-front"
         image="/auction.png"
