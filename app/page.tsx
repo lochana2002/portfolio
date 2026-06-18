@@ -115,12 +115,12 @@ export default function Home() {
       label: "GitHub",
     },
     {
-      href: "www.linkedin.com/in/lochana-thathsarani-ehelapitiya-1898a9350",
+      href: "https://linkedin.com/in/lochana-thathsarani-ehelapitiya-1898a9350",
       icon: <FaLinkedin size={22} />,
       label: "LinkedIn",
     },
     {
-      href: "ehltehelapitiya@gmail.com",
+      href: "https://ehltehelapitiya@gmail.com",
       icon: <FaEnvelope size={22} />,
       label: "Email",
     },
@@ -611,12 +611,12 @@ export default function Home() {
 <div className="flex flex-wrap justify-center gap-3">
   {[
     {
-      href: "ehltehelapitiya@gmail.com",
+      href: "https://ehltehelapitiya@gmail.com",
       icon: <FaEnvelope size={14} />,
       label: "Email",
     },
     {
-      href: "www.linkedin.com/in/lochana-thathsarani-ehelapitiya-1898a9350",
+      href: "https://linkedin.com/in/lochana-thathsarani-ehelapitiya-1898a9350",
       icon: <FaLinkedin size={14} />,
       label: "LinkedIn",
     },
