@@ -22,7 +22,7 @@ export default function Navbar() {
 
   // Track active section
   useEffect(() => {
-    const sections = ["home", "about", "education", "skills", "projects", "contact"];
+    const sections = ["home", "about", "education", "skills", "projects", "certifications", "contact"];
 
     const observers = sections.map((id) => {
       const el = document.getElementById(id);
@@ -45,7 +45,7 @@ export default function Navbar() {
   if (!mounted) return null;
 
   const currentTheme = theme === "system" ? resolvedTheme : theme;
-  const navLinks = ["home", "about", "education", "skills", "projects"];
+  const navLinks = ["home", "about", "education", "skills", "projects", "certifications"];
 
   const scrollToSection = (id: string) => {
     setMobileOpen(false);
