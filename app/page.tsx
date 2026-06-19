@@ -8,14 +8,13 @@ import {
   SiJavascript, SiTypescript, SiReact, SiNextdotjs,
   SiNodedotjs,
   SiNestjs,
-  SiFirebase,
-  SiPostman,
+  
+  SiPostman, SiSwagger, 
   SiGithub,
   SiTailwindcss,
   SiHtml5,
-  SiCss3,SiMysql,
+  SiCss3,SiMysql, SiCanva,
   SiPostgresql,
-  SiMongodb,
   SiFigma,
   SiAdobephotoshop,
 } from "react-icons/si";
@@ -295,8 +294,9 @@ applications through modern development practices and effective UI/UX design.  I
             </span>
             <h4 className="text-lg font-semibold mb-1">Undergraduate – Software Engineering</h4>
             <p className="text-sm text-blue-400 mb-3 font-medium">NSBM Green University</p>
-            <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-              Focusing on Full-Stack Web Application Development, UI/UX design, and modern web technologies.
+            <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed text-justify">
+              Focusing on full-stack web development, creating intuitive, scalable, and user-centered web applications
+through modern development practices and effective UI/UX design. 
             </p>
           </div>
         </div>
@@ -374,13 +374,13 @@ applications through modern development practices and effective UI/UX design.  I
 
         <div className="flex flex-wrap gap-3">
           {[
+              { name: "HTML", icon: <SiHtml5 size={18} /> },
+  { name: "CSS", icon: <SiCss3 size={18} /> },
   { name: "JavaScript", icon: <SiJavascript size={18} /> },
   { name: "TypeScript", icon: <SiTypescript size={18} /> },
   { name: "React", icon: <SiReact size={18} /> },
   { name: "Next.js", icon: <SiNextdotjs size={18} /> },
   { name: "Tailwind CSS", icon: <SiTailwindcss size={18} /> },
-  { name: "HTML", icon: <SiHtml5 size={18} /> },
-  { name: "CSS", icon: <SiCss3 size={18} /> },
 ].map((skill) => (
             <span
               key={skill.name}
@@ -419,7 +419,7 @@ applications through modern development practices and effective UI/UX design.  I
           {[
   { name: "Node.js", icon: <SiNodedotjs size={18} /> },
   { name: "NestJS", icon: <SiNestjs size={18} /> },
-  { name: "Firebase", icon: <SiFirebase size={18} /> },
+
 ].map((skill) => (
             <span
               key={skill.name}
@@ -457,7 +457,7 @@ applications through modern development practices and effective UI/UX design.  I
         <div className="flex flex-wrap gap-3">
           {[
   { name: "MySQL", icon: <SiMysql size={18} /> },
-  { name: "PostgreSQL", icon: <SiPostgresql size={18} /> }, { name: "MongoDB", icon: <SiMongodb size={18} /> },
+  { name: "PostgreSQL", icon: <SiPostgresql size={18} /> }, 
 ].map((skill) => (
             <span
               key={skill.name}
@@ -494,8 +494,9 @@ applications through modern development practices and effective UI/UX design.  I
         <div className="flex flex-wrap gap-3">
           {[
               { name: "Git & GitHub", icon: <SiGithub size={18} /> },
-  { name: "Postman", icon: <SiPostman size={18} /> },
-  { name: "Figma", icon: <SiFigma size={18} /> },
+  { name: "Postman", icon: <SiPostman size={18} /> },  { name: "Swagger", icon: <SiSwagger size={18} /> },
+  { name: "Figma", icon: <SiFigma size={18} /> }, 
+    { name: "Canva", icon: <SiCanva size={18} /> },
   { name: "Photoshop", icon: <SiAdobephotoshop size={18} /> },
           ].map((skill) => (
             <span
@@ -543,7 +544,7 @@ applications through modern development practices and effective UI/UX design.  I
       <ProjectCard
         title="'GoviAI' Mobile Application"
         description="Developed an AI-powered agriculture mobile application for Sri Lankan farmers using Flutter and  Firebase."
-        tech={["Flutter", "Firebase", "Gemini API"]}
+        tech={["Flutter", "Firebase", "Gemini API", "Groq LLaMA"]}
         github="https://github.com/Nisansala23/govi-ai"
         image="/goviai.png"
       />
@@ -551,7 +552,7 @@ applications through modern development practices and effective UI/UX design.  I
         title="Auction Site Management System"
         description="Developed the complete Blog module as a full-stack contributor using ASP.NET Core, Entity Framework Core, and
 Next.js."
-        tech={["Next.js", "Tailwind", "TypeScript", "C#", ]}
+        tech={["Next.js", "Tailwind", "TypeScript", "ASP.NET", "C#", ]}
         github="https://github.com/laspraharshana/test-front"
         image="/auction.png"
       />
@@ -603,11 +604,12 @@ Next.js."
   Open to internships, freelance projects, and collaborations. Feel free to reach out anytime.
 </p>
 {/* Heading */}
-<h3 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white mb-4 text-center">
+<h3 className="text-2xl md:text-3xl py-15 font-semibold text-gray-900 dark:text-white mb-4 text-center">
   Let’s build something great together
 </h3>
 
 {/* Contact pills */}
+<ScrollReveal>
 <div className="flex flex-wrap justify-center gap-3">
   {[
     {
@@ -648,7 +650,7 @@ Next.js."
       {item.label}
     </a>
   ))}
-</div>
+</div></ScrollReveal>
   </section>
 </ScrollReveal>
     </>
