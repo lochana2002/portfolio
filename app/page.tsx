@@ -85,7 +85,7 @@ applications through modern development practices and effective UI/UX design.
 
       {/* ================= RESUME BUTTON ================= */}
 <a
-  href="/Lochana_Ehelapitiya_Resume.pdf"
+  href="/Lochana_Ehelapitiya_resume.pdf"
   target="_blank"
   className="
     inline-flex items-center gap-2
